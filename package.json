@@ -1,0 +1,26 @@
+{
+  "name": "thebeatles",
+  "version": "1.0.0",
+  "description": "Api The Beathes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilliamCortes/theBeatles.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Html",
+    "Css",
+    "Node"
+  ],
+  "author": "William Cortés",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WilliamCortes/theBeatles/issues"
+  },
+  "homepage": "https://github.com/WilliamCortes/theBeatles#readme"
+}
