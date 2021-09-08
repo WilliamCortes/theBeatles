@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/WilliamCortes/theBeatles/issues"
   },
-  "homepage": "https://github.com/WilliamCortes/theBeatles#readme"
+  "homepage": "https://github.com/WilliamCortes/theBeatles#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  }
 }

@@ -1,5 +1,7 @@
 var http = require('http');
 var fs   = require('fs');
+require('dotenv').config();
+
 
 var beatles=[{
   name: "John Lennon",
@@ -143,4 +145,5 @@ function replaceData(template, beatle){
 const server = http.createServer(handleServer)
 //const server = http.createServer(martina)
 
-server.listen(1338, '127.0.0.1')
+server.listen(process.env.PORT, '127.0.0.1')
+// server.listen(1338, '127.0.0.1')
