@@ -144,6 +144,11 @@ function replaceData(template, beatle){
 }
 const server = http.createServer(handleServer)
 //const server = http.createServer(martina)
+const port_number = process.env.PORT || 1338;
+const host = '0.0.0.0';
 
-server.listen(process.env.PORT, '127.0.0.1')
+
+server.listen(port_number, host,() =>{
+  console.log(`Server listenning on port: ${port_number}`)
+})
 // server.listen(1338, '127.0.0.1')
