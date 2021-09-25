@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Beatles</title>
+  <link rel="shortcut icon" href="https://i.imgur.com/5dRvW68.jpg">
+  <link href="styles/style.css" rel="stylesheet">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    }
+
+    body {
+      background: rgb(238, 232, 232);
+    }
+
+    .navbar {
+      background-color: rgb(33, 37, 41);
+      height: 3.8rem;
+      display: flex;
+    }
+
+    .navbar-brand {
+      margin: 14px 0 0 9px;
+      flex-basis: 15%;
+    }
+    .navbar-brand img{
+      border-radius: 6px;
+    }
+    .navbar_ul {
+      flex-basis: 85%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+
+    }
+
+    .navbar_ul li {
+      list-style: none;
+      text-align: center;
+      margin: 10px;
+
+    }
+
+    .nav-link {
+      color: rgb(155, 157, 158);
+      text-decoration: none;
+      font-size: 1rem;
+      flex: 1;
+
+    }
+
+    .nav-link:hover {
+      color: #0d6efd;
+
+    }
+
+    /* inicia */
+
+    .header__menu {
+      display: none;
+      /* margin-right: 30px; */
+    }
+
+    .header_ul {
+      display: none;
+      list-style: none;
+      position: absolute;
+      padding: 0px;
+      width: 150px;
+      text-align: right;
+      /* margin: 0 0 0 -14px; */
+      margin-left: -120px;
+      background-color:rgb(33, 37, 41);
+      padding: 10px;
+
+    }
+
+    .header__menu:hover .header_ul,
+    .header_ul:hover {
+      display: block;
+      cursor: pointer;
+    }
+
+    .header_ul li {
+      margin: 10px 0;
+    }
+
+    .header_ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .header_ul li a:hover {
+      color: #0d6efd;
+    }
+
+    .header__menu--profile {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .header__menu--profile img {
+      margin: 20px 20px 0 0;
+      width: 40px;
+
+    }
+
+    .header__menu--profile p {
+      margin: 0;
+      color: white;
+    }
+
+    /* termina */
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 15vh;
+      flex-wrap: wrap;
+    }
+
+    .container picture {
+      margin-bottom: 3rem;
+    }
+
+    .api-link {
+      width: 200px;
+      color: black;
+      text-decoration: none;
+      border: solid grey 2px;
+      border-radius: 5px;
+      margin: 5px;
+    }
+
+    .contain {
+      border: solid grey 2px;
+      border-radius: 5px;
+      width: 45vw;
+      max-height: 60vh;
+      padding: 12px;
+      font-size: 20px;
+      box-sizing: border-box;
+    }
+    .contain h2{
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .contain section{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 80%;
+
+    }
+    .img-beatles {
+      border: solid grey 2px;
+      border-radius: 5px;
+      width: 45vw;
+      height: 60vh;
+
+    }
+    .api-link{
+      margin: 5px;
+      padding: 5px;
+      width: 50%;
+    }
+
+    @media (max-width: 970px) {
+      .img-beatles {
+        width: 80vw;
+      }
+
+      .contain {
+        width: 80vw;
+      }
+    }
+
+    @media(max-width:750px) {
+      .navbar{
+        justify-content: space-between;
+      }
+      .navbar_ul {
+        display: none;
+      }
+
+      .header__menu {
+        display: block;
+      }
+    }
+    @media (max-width:480px){
+      .img-beatles {
+        height:auto;
+      }
+
+      .contain {
+        height: auto;
+        overflow-y: visible;
+      }
+      .api-link{
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+
+    <a class="navbar-brand" href="https://williamcortes.github.io/"><img style=" width: 120px"
+        src="https://i.imgur.com/LXCzXs0.jpg" /></a>
+
+    <ul class="navbar_ul">
+      <li><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+      <li><a class="nav-link" href="/John%20Lennon">John Lennon</a></li>
+      <li><a class="nav-link" href="Paul%20McCartney">Paul McCartney</a></li>
+      <li><a class="nav-link" href="George%20Harrison">George Harrison</a></li>
+      <li><a class="nav-link" href="Richard%20Starkey">Richard Starkey</a></li>
+    </ul>
+    <div class="header__menu">
+      <div class="header__menu--profile">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEX///8AAADPz8+WlpZLS0v7+/vu7u5vb29TU1PDw8Pz8/N8fHyCgoITExMzMzOsrKyPj4+6urrU1NTo6Oizs7NCQkJkZGQoKCilpaUtLS05OTmenp7IyMiFhYVaWlpqamoLCwt+baPtAAACfUlEQVR4nO3di27CMAyF4TBWoAxYx2UX2Abv/5RbpSE2aXLSJpJl5/+ewEdQSlLXCQEAAAAAAAAAAAAAAAAA/Fu2H5/3dnyu2uWgfLv5xJ75Ljlf02kXO1LXpAWcHbQrHe0wSwm4XGvXmWGdcDU2G+0qs2ziX9SVdo2ZVrGAW+0Ks20jCZ+1C8z2LAecaddXgPx7+qhdXgGPYsKzdnkFnMWEL9rlFfAiJrxol1eCmFC7uCLEhJb/sV2txYT32uUVcBATWl03/daJCd+1yyvgXUzo4Mf0IgcMr9oFZnuNJGzetCvM9BZdIFq/EiNXof3v6SkeMISpdpUZpikBQ3jSrnO0p7SA3+tgixvCk8k8aS/xx2561K53oGOXvuV9Dbm9s2M7OB4AAAAAAAAAALBj2Z6mdpwGvm4Rmv1C+1nSYIt94rsIvdZmN/umTQ34oF3qaA9pAe19QW8WKQFtPuG+mscDWu/0lru8g4dm/Vi7gvVXZqIvzTTa9RUg3xbtNgvdyG1Ddm+FN/JN0Vqf0H82YkL7LcKxJmHt6oqo/DO0uaj46ygm9P9b6v9+6P8/jf//pRWsLfyvDytY41ewT2P5ppi411bBfmkFe949588tAAAAAAAAAACAJc7nRO06aw/Yhs36mtkcen1Onte21y51tMSZe+7nJp60q8ySMPvS/fzSxvrc+egMWtvzWXuxOcLa9RXg+yrsyVei/5nsdg+zupHn6vs/G0G7uiIqT2j9ft+Tz5mxuWz6Sz4ryHqXd0/u9Lbfqh9t1nd/7loFZ+eZf2kmev5hBWdY+j+HtIKzZCs4Dzj4P9O5Z+1c7g9euAAAAAAAAAAAAAAAAABQhS+ZyFZoP93BCgAAAABJRU5ErkJggg=="
+          alt="menu">
+      </div>
+      <ul class="header_ul">
+        <li><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+        <li><a class="nav-link" href="/John%20Lennon">John Lennon</a></li>
+        <li><a class="nav-link" href="Paul%20McCartney">Paul McCartney</a></li>
+        <li><a class="nav-link" href="George%20Harrison">George Harrison</a></li>
+        <li><a class="nav-link" href="Richard%20Starkey">Richard Starkey</a></li>
+        <li><a href="/"><i class="fa-solid fa-dog"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <picture>
+      <img class="img-beatles" src="https://i.imgur.com/uiBzoGR.jpg" alt="Imagen de The Beatles">
+    </picture>
+    <div class="contain">
+      <h2>The Beatles Api</h2>
+      <p>
+        Encontrras información de los miembros de labanda The Beatles.
+      </p>
+      
+      <p>Links de los personajes:</p>
+      <section>
+        <a class="api-link active" aria-current="page" href="/api">Api</a>
+        <a class="api-link" href="/api/John%20Lennon">John Lennon</a>
+        <a class="api-link" href="/api/Paul%20McCartney">Paul McCartney</a>
+        <a class="api-link" href="/api/George%20Harrison">George Harrison</a>
+        <a class="api-link" href="/api/Richard%20Starkey">Richard Starkey</a>
+      </section>
+
+    </div>
+
+  </div>
+</body>
+
+</html>
